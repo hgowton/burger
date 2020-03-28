@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 //Create the connection to the burgers_db in mysql
 connection.connect(function(err) {
     if (err) {
-        console.error("err0r connecting: " + err.stack);
+        console.error("error connecting: " + err.stack);
         return;
     }
     console.log("connected as id " + connection.threadId);

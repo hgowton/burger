@@ -1,0 +1,7 @@
+//Import ORM to create functions that will interact with the burgers_db;
+var orm = require("../config/orm.js");
+
+// create the code that will call the ORM functions using burger specific input for the ORM.
+
+//Export the database functions for the controller (burgersController.js)
+module.exports = burgers;
