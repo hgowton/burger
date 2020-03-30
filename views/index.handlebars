@@ -1,0 +1,28 @@
+<h1>Burgatory</h1>
+
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{>burgers/burger-block devoured=false}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Burger's Devoured</h2>
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burgers/burger-block devoured=true}}
+        {{/if}}
+        <button class="cancel-burger" data-id="{{this.id}}">CANCEL!</button>
+    {{/each}}
+</ul>
+
+<h2>Complete your order below.  Enter the description for each item.  Then press submit.</h2>
+<form class="create-form">
+    <div class="form-group">
+        <input type="text" id="burger" name="burger_name">
+    </div>
+    <button type="submit">Place Your Order</button>
+</form>
