@@ -2,7 +2,7 @@
 var connection = require("../config/connection.js");
 
 
-//MAY NOT NEED ------ creates an array of three ? marks in a string to help with MYSQL syntax
+//Creates an array of three ? marks in a string to help with MYSQL syntax
 function printQuestionMarks(num) {
     var arr = [];
 
@@ -12,8 +12,7 @@ function printQuestionMarks(num) {
     return arr.toString();
 }
 
-//NEED to look at in more detail 
-//------ converts object key/value pairs to SQL syntax (helper function)
+//Converts object key/value pairs to SQL syntax (helper function)
 function objToSql(ob) {
     var arr = [];
     //loops through keys and pushes the key/value as a string into array
@@ -52,7 +51,7 @@ var orm = {
     },
     //function enables user to add a burger to the list
     insertOne: function(table, cols, vals, cb) {
-        var queryString = "INSERT INTO" + table;
+        var queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
