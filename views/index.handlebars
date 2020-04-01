@@ -3,9 +3,11 @@
         <div class="col-md-12 title">
             <h1>Burgatory</h1>
         </div>
+    </div>
 
+    <div class="row back">
         <div class="col-md-7">
-            <h3 class="directions">Orders</h3>
+            <h3 class="list">Orders</h3>
             <ul> 
                 {{#each burgers}}
                     {{#unless devoured}}
@@ -18,7 +20,7 @@
         </div>
         <div class="col-md-5">
 
-        <h3 class="directions">Burger's Devoured</h3>
+        <h3 class="list">Burger's Devoured</h3>
             <ul>
                 {{#each burgers}}
                     {{#if devoured}}
@@ -29,7 +31,7 @@
         </div>
 
         <div class="col-md-12">
-            <p class="directions" id="order">Complete your order below.  Enter the description for each item.  Then press submit.</p>
+            <p id="order">Complete your order below.  Enter the description for each item.  Then press Place Your Order.</p>
             <form class="create-form">
                 <div class="form-group">
                     <input type="text" id="burg" name="burger_name" minlength="5" size="50">
