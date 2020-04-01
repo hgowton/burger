@@ -31,9 +31,14 @@ router.post("/api/burgers", function (req, res) {
 router.put("/api/burgers/:id", function(req, res){
     var condition = "id = " + req.params.id;
     console.log("condition " + condition)
-
+    var devoured = 0
+    if (req.body.devoured == 'true') {
+            devoured = 1
+        } else {
+            devoured = 0
+        }
     burger.updateOne({
-        devoured: parseInt(req.body.devoured)
+        devoured: devoured
     }, condition, function(result) {
         if (result.changedRows == 0){
             //if no rows are changed, then the ID does not exist
